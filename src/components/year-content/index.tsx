@@ -9,12 +9,14 @@ interface YearContentProps {
 	startDate: string;
 	endDate?: string;
 	currentYear?: boolean;
+	fromLabel?: boolean;
 }
 
 const YearContent = ({
 	startDate,
 	endDate,
 	currentYear = false,
+	fromLabel = false,
 }: PropsWithChildren<YearContentProps>) => {
 	const { lang, dateFormat } = useContext(ConfigContext);
 	const _lang = clearString(lang).split(' ')[0];
@@ -37,7 +39,7 @@ const YearContent = ({
 
 	const _startDate = (
 		<>
-			<YearSpan>{mapText[_lang].from}</YearSpan>
+			{fromLabel && <YearSpan>{mapText[_lang].from}</YearSpan>}
 			<time dateTime={startDate}>
 				{transformDate({ date: startDate, lang: _lang, type: dateFormat })}
 			</time>
