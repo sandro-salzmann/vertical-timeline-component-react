@@ -3,6 +3,7 @@ interface YearContentProps {
     startDate: string;
     endDate?: string;
     currentYear?: boolean;
+    fromLabel?: boolean;
 }
-declare const YearContent: ({ startDate, endDate, currentYear, }: PropsWithChildren<YearContentProps>) => JSX.Element;
+declare const YearContent: ({ startDate, endDate, currentYear, fromLabel, }: PropsWithChildren<YearContentProps>) => JSX.Element;
 export default YearContent;
