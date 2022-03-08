@@ -10,7 +10,7 @@ export const TimelineWrapper = styled.div`
 `;
 
 export const TimelineWrapperInner = styled.div`
-	padding: 15px 10px;
+	padding: 0px;
 	width: 100%;
 `;
 
